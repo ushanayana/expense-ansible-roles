@@ -18,6 +18,12 @@
   notify:
   - restart nginx
 
+- name: validate nginx configuration
+  ansible.builtin.command: nginx -t
+  register: nginx_test
+  changed_when: false
+
+
 - name: start and enable nginx
   ansible.builtin.service:
     name: nginx
