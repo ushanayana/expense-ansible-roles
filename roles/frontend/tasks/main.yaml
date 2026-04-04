@@ -26,3 +26,18 @@
 #   ansible.builtin.service:
 #     name: nginx
 #     state: restarted
+
+#!/bin/bash
+# set -e  # stop on error
+
+# echo "Installing nginx..."
+# sudo yum install -y nginx
+
+# echo "Starting nginx..."
+# sudo systemctl start nginx
+
+# echo "Checking config..."
+# sudo nginx -t
+
+# echo "Restarting nginx..."
+# sudo systemctl restart nginx
